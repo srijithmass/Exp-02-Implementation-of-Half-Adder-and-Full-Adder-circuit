@@ -43,7 +43,15 @@ RegisterNumber: 212221240054
 ```
 HALF ADDER:
 ~~~
-
+module ex2(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
+~~~
+FULL ADDER:
+~~~
 module ex2(A,B,Cin,S,Cout);
 input A,B,Cin;
 output S,Cout;
@@ -53,15 +61,6 @@ xor(S,D,Cin);
 and(E,Cin,D);
 and(F,A,B);
 or(Cout,E,F);
-endmodule
-~~~
-FULL ADDER:
-~~~
-module ex2(a,b,sum,carry);
-input a,b;
-output sum,carry;
-xor(sum,a,b);
-and(carry,a,b);
 endmodule
 ~~~
 Logic symbol & Truthtable
